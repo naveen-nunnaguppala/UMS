@@ -60,27 +60,26 @@ tr:nth-child(even) {
   <center><div style="font-size:30px;margin-top:30px;"<h1><p font-face="The woodlands"><b>Student Performance</b></h1></p></div></center>
 </head>
 <body>
+  <?php
+  include ("session.php");
+  ?>
 <div >
   <table>
     <tr>
       <th><p>Name</p></th>
-      <td><p>Destroyer</p></td>
+      <td><p><?php echo $login_first."".$login_last ?></p></td>
     </tr>
     <tr>
       <th>Section</th>
-      <td>K1620</td>
+      <td><?php echo $login_section; ?></td>
     </th>
     <tr>
-      <th><p>Group</p></th>
-      <td><p>2</p></td>
-    </tr>
-    <tr>
       <th>Roll No:</th>
-      <td>31</td>
+      <td><?php echo $login_roll?></td>
     </tr>
     <tr>
       <th><p>Registration No:</p></th>
-      <td><p>11609374</p></td>
+      <td><p><?php echo $login_session; ?></p></td>
     </tr>
     <tr>
       <th>First Semester Attendence</th>
@@ -95,8 +94,8 @@ tr:nth-child(even) {
       <td><ul>
          <li><a href="#">Select Semester</a>
          <ul>
-           <li><a href="1sem.html">First Semester</a></li>
-           <li><a href="2sem.html">Second Semester</a>
+           <li><a href="1sem.php">First Semester</a></li>
+           <li><a href="2sem.php">Second Semester</a>
            </ul>
          </ul>
       </td>
